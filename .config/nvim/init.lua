@@ -19,7 +19,6 @@ vim.o.expandtab      = false
 vim.o.shiftwidth     = 2
 vim.o.tabstop        = 2
 vim.o.softtabstop    = 2
-vim.o.scrolloff      = 23
 vim.opt.fillchars    = vim.opt.fillchars + { eob = " " }
 vim.o.shell          = '/usr/bin/zsh'
 vim.o.langmap        = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
