@@ -1,0 +1,55 @@
+[colors]
+name=tokyonight
+
+# Core colors
+accent=#6ECE6A
+text=#C0CAF5
+textDim=#6ECE6A
+textMuted=#565F89
+
+# General Colors
+logo=#7DCFFF
+header=#6ECE6A
+footer=#15161E
+help=#6ECE6A
+link=#7DCFFF
+nowplaying=#6ECE6A
+
+# Playlist View
+playlist.rownum=#7DCFFF
+playlist.title=#7DCFFF
+playlist.playing=#6ECE6A
+
+# Track View
+trackview.title=#7DCFFF
+trackview.artist=#7DCFFF
+trackview.album=#7DCFFF
+trackview.year=#7DCFFF
+trackview.time=#6ECE6A
+trackview.visualizer=#7DCFFF
+trackview.lyrics=#6ECE6A
+
+# Library View
+library.artist=#7DCFFF
+library.album=#7DCFFF
+library.track=#7DCFFF
+library.enqueued=#6ECE6A
+library.playing=#6ECE6A
+
+# Search
+search.label=#7DCFFF
+search.query=#6ECE6A
+search.result=#6ECE6A
+search.enqueued=#7DCFFF
+search.playing=#6ECE6A
+
+# Progress
+progress.filled=#6ECE6A
+progress.empty=#7DCFFF
+progress.elapsed=#15161E
+
+# Status
+status.info=-1      	# Default foreground
+status.warning=#787878  # The old school gray, this works on most terminals
+status.error=#787878  	# The old school gray, this works on most terminals
+status.success=#787878  # The old school gray, this works on most terminals

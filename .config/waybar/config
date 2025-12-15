@@ -1,0 +1,124 @@
+[
+	{
+		"layer": "top",
+		"position": "top",
+		"mod": "dock",
+		"margin-left": 400,
+		"margin-right": 400,
+		"margin-top": 4,
+		"margin-bottom": -2,
+		"exclusive": true,
+		"passthrough": false,
+		"gtk-layer-shell": true,
+		"reload_style_on_change": true,
+
+		"battery": {
+			"format": "{capacity}",
+			"format-charging": "󱐋 {capacity}",
+			"interval": 1,
+			"states": {
+				"critical": 5,
+				"warning": 25
+			}
+		},
+
+		"clock": {
+			"format": "{:%I:%M:%S}",
+			"format-alt": "{:%y-%m-%d}",
+			"interval": 1,
+			"tooltip": false
+		},
+
+		"network": {
+			"tooltip": true,
+			"format-wifi": "{icon} ",
+			"format-icons": ["󰦔 "],
+			//  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
+			"rotate": 0,
+			"format-ethernet": " ",
+			"tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+			"format-linked": " {ifname} (No IP)",
+			"format-disconnected": "󰊠 ",
+			"tooltip-format-disconnected": "Disconnected",
+			"on-click": "/usr/local/bin/ags -t ControlPanel",
+			"interval": 2,
+		},
+
+
+		"custom/arch": {
+			"format": "󰍳 ",
+			//   󰚺        󰦔    󰍳        󰀚  󰀫  󰊠  
+			"tooltip": false
+		},
+
+		"hyprland/language": {
+			"format-en": "en",
+			"format-ru": "ru",
+			"min-length": 2,
+		},
+
+		"hyprland/workspaces": {
+			"disable-scroll": true,
+			"format": "{icon}",
+			"format-icons": {
+				"active": "",
+			   	"default": ""
+				//           󰛄  󰏎  󱢖  
+			},
+
+			"persistent-workspaces": {
+				"*": 5
+			},
+		},
+
+		"modules-left": [
+			"custom/arch",
+			"hyprland/workspaces"
+		],
+
+		"modules-center": [
+			"clock",
+		],
+
+		"modules-right": [
+			"hyprland/language",
+			"pulseaudio",
+			"battery",
+			"network",
+			"custom/separator",
+			"tray",
+		],
+
+		/*
+		"custom/cliphist": {
+		"format": "{}",
+		"rotate": 0,
+		"exec": "echo ; echo 󰅇 clipboard history",
+		"on-click": "sleep 0.1 && cliphist.sh c",
+		"on-click-right": "sleep 0.1 && cliphist.sh d",
+		"on-click-middle": "sleep 0.1 && cliphist.sh w",
+		"interval" : 86400, // once every day
+		"tooltip": true
+		},
+		*/
+
+		"pulseaudio": {
+			"format": "{volume}",
+			"format-muted": "muted",
+			"format-bluetooth": " {volume}",
+			"format-bluetooth-muted": " muted",
+			"on-click": "format-muted",
+			"tooltip": true,
+		},
+
+		"tray": {
+			"icon-size": 17,
+			"spacing": 2
+		},
+
+		"custom/separator": {
+			"format": "|",
+			"tooltip": false
+		},
+	}
+]

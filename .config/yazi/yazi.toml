@@ -1,0 +1,20 @@
+[mgr]
+ratio = [1, 3, 4]
+sort_by = "extension"
+sort_dir_first = true
+
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "open --hovered"
+desc = "Open hovered file (with default opener)"
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true, for = "unix" }
+]
+
+[open]
+prepend_rules = [
+  { mime = "text/*", use = "edit" }
+]
+

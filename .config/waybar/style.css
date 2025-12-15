@@ -1,0 +1,114 @@
+
+* {
+	font-family: "SF Pro Text";
+	font-weight: bold;
+	font-size: 16px;
+}
+
+tooltip {
+	background: #15161E;
+	border-radius: 7px;
+	border: 2px solid #2A334A;
+	color: #6ECE6A;
+}
+tooltip * {
+	color: #737AA2;
+}
+
+window#waybar {
+	background: #15161E;
+	border: 2px solid rgba(42, 51, 74, 1.0);
+	border-radius: 9px;
+}
+
+#custom-arch {
+	padding-top: 1px;
+	margin-left: 12px;
+	margin-right: -4px;
+	font-size: 20px;
+	color: #7DCFFF;
+}
+
+#workspaces {
+	padding-top: 2px;
+}
+
+#workspaces button {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#workspaces button.persistent {
+	color: #7DCFFF;
+}
+
+#workspaces button.active {
+	color: #6ECE6A;
+}
+
+#workspaces button:hover {
+	padding-left: 4px;
+	padding-right: 4px;
+    box-shadow: none;
+	background: none;
+	border: 0 solid #15161E;
+}
+
+#workspaces label,
+#workspaces .label {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#clock {
+	color: #7DCFFF;
+}
+
+#language {
+	padding-bottom: 2px;
+	margin-right: 7px;
+	color: #6ECE6A;
+}
+
+#pulseaudio {
+	padding-top: 1px;
+	margin-right: 8px;
+	color: #7DCFFF;
+}
+
+#pulseaudio.muted {
+	color: #BB9AF7;
+}
+
+#battery {
+	padding-top: 1px;
+	margin-right: 10px;
+	color: #6ECE6A;
+}
+
+#network {
+	padding-top: 1px;
+	margin-right: -4px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #7DCFFF;
+}
+
+#custom-separator {
+	margin-right: 4px;
+	padding-bottom: 2px;
+	font-size: 21px;
+	color: #2A334A;
+}
+
+#tray {
+	padding-top: 4px;
+	margin-right: 4px;
+	color: #6ECE6A;
+}
+
+#tray image {
+	/*margin: 2 0px;*/
+	margin-right: 8px;
+}
+

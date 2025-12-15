@@ -1,0 +1,46 @@
+{
+  "plugins": {
+    "blink.cmp": [],
+    "icons": {
+      "rev": "8dcb311",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "indent-blankline.nvim": [],
+    "langmapper.nvim": {
+      "rev": "57a2fe4",
+      "src": "https://github.com/Wansmer/langmapper.nvim"
+    },
+    "lspsaga.nvim": {
+      "rev": "8efe00d",
+      "src": "https://github.com/nvimdev/lspsaga.nvim"
+    },
+    "lualine.nvim": [],
+    "lush.nvim": {
+      "rev": "9c60ec2",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "mini.pick": [],
+    "neorg": {
+      "rev": "59775af2",
+      "src": "https://github.com/nvim-neorg/neorg"
+    },
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "nvim-web-devicons": [],
+    "oil.nvim": [],
+    "pathlib.nvim": [],
+    "plenary.nvim": {
+      "rev": "b9fd522",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "bfd67f1",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "6d8dc61",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+    },
+    "treesitter": []
+  }
+}

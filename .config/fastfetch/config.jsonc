@@ -1,0 +1,105 @@
+{
+	"logo": {
+		"source": "arch_small",
+		"padding": {
+			"top": 2,
+			"left": 2,
+			"right": 3
+		},
+		"color": {
+			"1": "cyan",
+			"2": "cyan"
+		}
+	},
+	"display": {
+		"separator": "  ::  ",
+		"color": {
+			"title": "green",
+			"keys": "cyan",
+			"separator": "green",
+			"output": "cyan"
+		},
+		"key": {
+			"width": 15,
+			"type": "string"
+		}
+	},
+	"modules": [
+		{
+			"format": "    {6}  \u001b[32m❯❯\u001b[0m  {8}",
+			"type": "title",
+		},
+		{
+			"type": "os",
+			"key": "[distro]",
+			"format": "{name}"
+		},
+		{
+			"type": "kernel",
+			"key": "[kernel]",
+			"format": "{release}"
+		},
+		{
+			"type": "packages",
+			"key": "[packgs]",
+			"format": "{all}"
+		},
+		{
+			"type": "shell",
+			"key": "[$shell]",
+			"format": "{process-name}"
+		},
+		{
+			"type": "terminal",
+			"key": "[termnl]",
+			"format": "{pretty-name}"
+		},
+		{
+			"type": "battery",
+			"key": "[batter]"
+		},
+		{
+			"type" : "memory",
+			"key": "[memory]",
+			"format": "{used} / {total} ({3})"
+		},
+		{
+			"type": "cpu",
+			"key": "[cpu]   ",
+			"format": "i7-8650U @ {7}"
+		},
+		{
+			"type": "gpu",
+			"key": "[gpu]   ",
+			"format": "{2}"
+		},
+		{
+			"type": "wm",
+			"key": "[wm]    ",
+			"format": "{1}"
+		},
+		{
+			"type": "separator",
+			"string": " ",
+			"length": 38,
+			"outputColor": "blink_"
+		},
+
+    // "theme",
+    // "host",
+    // "uptime",
+    // "display",
+    // "wm",
+    // "icons",
+    // "font",
+    // "cursor",
+    // "terminalfont",
+    // "swap",
+    // "disk",
+    // "localip",
+    // "battery",
+    // "poweradapter",
+    // "locale",
+    // "break"
+    ]
+}

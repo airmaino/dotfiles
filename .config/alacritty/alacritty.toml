@@ -1,0 +1,117 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = false
+
+[colors.bright]
+black = '#414868'
+red = '#FF899D'
+green = '#9FE044'
+yellow = '#FABA4A'
+blue = '#8DB0FF'
+magenta = '#C7A9FF'
+cyan = '#A4DAFF'
+white = '#C0CAF5'
+
+[colors.cursor]
+cursor = '#C0CAF5'
+text = '#15161E'
+
+[colors.dim]
+black = "#494D64"
+blue = "#8AADF4"
+cyan = "#8BD5CA"
+green = "#A6DA95"
+magenta = "#F5BDE6"
+red = "#ED8796"
+white = "#B8C0E0"
+yellow = "#EED49F"
+
+[colors.normal]
+black = '#15161E'
+red = '#E04C67'
+green = '#9ECE6A'
+yellow = '#E0AF68'
+blue = '#356CE6'
+magenta = '#BB9AF7'
+cyan = '#7DCFFF'
+white = '#C0CAF5'
+
+[colors.primary]
+background = '#15161E'
+foreground = '#C0CAF5'
+
+[colors.search.focused_match]
+background = "#F4DBD6"
+foreground = "#24273A"
+
+[colors.search.matches]
+background = "#A5ADCB"
+foreground = "#24273A"
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[[colors.indexed_colors]]
+index = 16
+color = '#FF9E64'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#DB4B4B'
+
+[cursor]
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[cursor.vi_mode_style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 13
+
+[font.normal]
+family = "SF Mono"
+style = "Semibold"
+
+[font.offset]
+x = 0
+y = -2
+
+[mouse]
+hide_when_typing = false
+
+[scrolling]
+history = 10000
+multiplier = 5
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+osc52 = "CopyPaste"
+
+[terminal.shell]
+args = ["-l"]
+program = "/bin/zsh"
+
+[window]
+decorations = "none"
+dynamic_padding = true
+startup_mode = "Windowed"
+
+[window.padding]
+x = 4
+y = 0
+
+[window.dimensions]
+columns = 66
+lines = 25
