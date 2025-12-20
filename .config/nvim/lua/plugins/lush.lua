@@ -199,13 +199,22 @@ return {
 			BlinkCmpSignatureHelp                { fg = colors.yellow },
 			BlinkCmpSignatureHelpBorder          { fg = colors.yellow },
 			BlinkCmpSignatureHelpActiveParameter { fg = colors.orange, gui = "bold" },
+
+			RenderMarkdownQuote1 { fg = colors.magenta },
+			RenderMarkdownQuote2 { fg = colors.orange },
+			RenderMarkdownQuote3 { fg = colors.green },
+			RenderMarkdownQuote4 { fg = colors.cyan },
+			RenderMarkdownQuote5 { fg = colors.blue2 },
+			RenderMarkdownQuote6 { fg = colors.purple },
+
+			RenderMarkdownInfo { fg = colors.cyan },
 	
 
         }
 	end)
 
 			vim.api.nvim_create_autocmd("FileType", {
-				pattern = "norg",
+				pattern = "markdown",
 				callback = function()
 					vim.cmd(string.format([[
 					highlight! LineNr guifg=%s guibg=%s
@@ -215,6 +224,7 @@ return {
 			})
 
 			lush(theme)
+
 			vim.api.nvim_set_hl(0, "@variable",                { fg = colors.fg.hex })
 			--- For C ---
 			vim.api.nvim_set_hl(0, "@variable.c",              { fg = colors.fg.hex })
@@ -229,15 +239,6 @@ return {
 			vim.api.nvim_set_hl(0, "@org.headline.level5", { fg = colors.blue2.hex })
 			vim.api.nvim_set_hl(0, "@org.headline.level6", { fg = colors.purple.hex })
 
-
-			vim.api.nvim_set_hl(0, "@org.bullet.org", { fg = colors.terminal_bl.hex })
-			vim.api.nvim_set_hl(0, "@org.checkbox.org", { fg = colors.terminal_bl.hex })
-			vim.api.nvim_set_hl(0, "@org.checkbox.checked.org", { fg = colors.green.hex })
-
-			vim.api.nvim_set_hl(0, "@org.keyword.todo", { fg = colors.cyan.hex, bg = colors.bg.hex })
-			vim.api.nvim_set_hl(0, "@org.keyword.done", { fg = colors.green.hex, bg = colors.bg.hex })
-			vim.api.nvim_set_hl(0, "@org.timestamp.inactive.org", { fg = colors.terminal_bl.hex })
-
-    end,
+		 	end,
   },
 }

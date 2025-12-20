@@ -19,11 +19,12 @@ vim.o.expandtab      = false
 vim.o.shiftwidth     = 2
 vim.o.tabstop        = 2
 vim.o.softtabstop    = 2
+vim.o.scrolloff      = 24
 vim.opt.fillchars    = vim.opt.fillchars + { eob = " " }
 vim.o.shell          = '/usr/bin/zsh'
 vim.o.langmap        = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 vim.opt.completeopt  = { 'menu', 'menuone', 'noselect', 'popup' }
-vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard    = "unnamedplus"
 vim.opt.shortmess:append 'c'
 vim.opt.shortmess:append 'I'
 vim.opt.winborder   = "rounded"
@@ -46,7 +47,7 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>q', ':silent quit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>r', ':silent restart<CR>', { silent = true })
 vim.keymap.set('n', '<ESC>', ':silent nohlsearch<CR>', { silent = true })
-vim.keymap.set('n', '<leader>w', ':silent write<CR>', { silent = true })
+vim.keymap.set('n', '<leader>w', ':silent write | update<CR>', { silent = true })
 
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')

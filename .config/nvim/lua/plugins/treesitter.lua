@@ -11,11 +11,7 @@ return {
 
 			tsconfigs.setup {
 				ensure_installed = {
-					"markdown",
-					"markdown_inline",
 					"lua",
-					"norg",
-					"norg_meta",
 				},
 				ignore_install = { 'org' },
 				highlight = { enable = true },

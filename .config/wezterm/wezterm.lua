@@ -2,7 +2,12 @@ local wezterm = require 'wezterm'
 
 local config = {}
 
-config.font_size = 12
+config.font = wezterm.font {
+	family = "SF Mono",
+	weight = "Medium",
+}
+
+config.font_size = 13
 
 config.window_padding = {
 	left = 4,
@@ -23,7 +28,7 @@ config.colors = {
 	cursor_fg = '#15161E',
 
 	selection_bg = '#252A3C',
-	selection_fg = '#24273A',
+	selection_fg = '#C0CAF5',
 
 	ansi = {
 		'#15161E',

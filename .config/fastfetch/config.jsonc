@@ -26,8 +26,8 @@
 	},
 	"modules": [
 		{
-			"format": "    {6}  \u001b[32m❯❯\u001b[0m  {8}",
-			"type": "title",
+			"format": "    {6}  \u001b[32m>>\u001b[0m  {8}",
+			"type": "title"
 		},
 		{
 			"type": "os",
@@ -63,6 +63,13 @@
 			"key": "[memory]",
 			"format": "{used} / {total} ({3})"
 		},
+		/*
+		{
+			"type" : "disk",
+			"key": "[disket]",
+			"format": "{1} / {2}"
+		},
+		*/
 		{
 			"type": "cpu",
 			"key": "[cpu]   ",

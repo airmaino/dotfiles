@@ -7,13 +7,11 @@ export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=( git zsh-syntax-highlighting zsh-autosuggestions )
+plugins=( git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode)
 
 bindkey -M vicmd '^F' forward-char
 bindkey -M viins '^F' autosuggest-accept
 bindkey -M vicmd '^F' autosuggest-accept
-
-source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -26,22 +24,26 @@ alias ff='fastfetch'
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
+# VI-MODE
 KEYTIMEOUT=1
 bindkey -v
 
-function zle-keymap-select {
-	case $KEYMAP in
-		vicmd)      echo -ne '\e[2 q' ;;
-		main|viins) echo -ne '\e[6 q' ;;
+ZVM_PROMPT_MODE="INS"
+
+function zvm_after_init() {
+	ZVM_PROMPT_MODE="NOR"
+}
+
+function zvm_after_select_vi_mode() {
+	case $ZVM_MODE in
+		NORMAL) ZVM_PROMPT_MODE="NOR" ;;
+		INSERT) ZVM_PROMPT_MODE="INS" ;;
+		VISUAL) ZVM_PROMPT_MODE="VIS" ;;
 	esac
+	p10k reload
 }
 
-function zle-line-init {
-	echo -ne '\e[6 q'
-}
-
-zle -N zle-keymap-select
-zle -N zle-line-init
+source $ZSH/oh-my-zsh.sh
 
 # RGO #
 rgo () {
