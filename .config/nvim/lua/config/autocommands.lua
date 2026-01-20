@@ -4,10 +4,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
 		vim.o.wrap           = true
+		vim.o.linebreak      = true
+		vim.o.breakindent    = true
 		vim.keymap.set('n', 'j', 'gj', { buffer = true, silent = true })
 		vim.keymap.set('n', 'k', 'gk', { buffer = true, silent = true })
 		vim.keymap.set('v', 'j', 'gj', { buffer = true, silent = true })
 		vim.keymap.set('v', 'k', 'gk', { buffer = true, silent = true })
+		vim.keymap.set('n', '<C-j>', '/^#\\+<CR>', { noremap = true, silent = true })
+		vim.keymap.set('n', '<C-k>', '?^#\\+<CR>', { noremap = true, silent = true })
 	end,
 })
 
@@ -22,7 +26,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.foldenable = true
 		vim.opt_local.foldtext = "v:lua.MarkdownFoldText()"
 		vim.opt_local.fillchars:append({ eob = " ", fold = " ", foldopen = "", foldclose = "" })
-		vim.cmd("silent! normal! zx")
 	end,
 })
 
@@ -88,12 +91,12 @@ vim.keymap.set('n', '<leader>b', 'za', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
 local checkboxes = {
-	["[ ]"] = "[x]",
-	["[x]"] = "[/]",
-	["[/]"] = "[!]",
-	["[!]"] = "[~]",
-	["[~]"] = "[+]",
-	["[+]"] = "[ ]",
+	["[ ]"] = "[X]",
+	["[X]"] = "[ ]",
+--	["[/]"] = "[!]",
+--	["[!]"] = "[~]",
+--	["[~]"] = "[+]",
+--	["[+]"] = "[ ]",
 }
 
 local function cycle_checkbox()
@@ -187,8 +190,6 @@ function _G.MarkdownFoldText()
 end
 
 vim.keymap.set('n', 'za', 'za', { noremap = true, silent = true })
-
-
 
 -- CLIPBOARD --
 vim.o.clipboard = 'unnamedplus'

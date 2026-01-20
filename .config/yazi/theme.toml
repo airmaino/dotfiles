@@ -7,14 +7,14 @@ hovered         = { bg = "#292E42" }
 preview_hovered = { bg = "#15161E" }
 
 # Find
-find_keyword  = { fg = "#15161e", bg = "#ff9e64", bold = true }
+find_keyword  = { fg = "#15161E", bg = "#FF9E64", bold = true }
 find_position = { fg = "#0db9d7", bg = "#192b38", bold = true }
 
 # Marker
 marker_copied   = { fg = "#9ece6a", bg = "#6ece6a" }
 marker_cut      = { fg = "#f7768e", bg = "#f7768e" }
 marker_marked   = { fg = "#bb9af7", bg = "#bb9af7" }
-marker_selected = { fg = "#80D0FF", bg = "#6a8dd9" }
+marker_selected = { fg = "#80D0FF", bg = "#80D0FF" }
 
 # Count
 count_copied   = { fg = "#15161e", bg = "#6ece6a" }

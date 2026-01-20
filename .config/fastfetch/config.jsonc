@@ -56,12 +56,13 @@
 		},
 		{
 			"type": "battery",
-			"key": "[batter]"
+			"key":  "[batter]",
+			"format": "{4}"
 		},
 		{
 			"type" : "memory",
 			"key": "[memory]",
-			"format": "{used} / {total} ({3})"
+			"format": "{1} / {2}"
 		},
 		/*
 		{
@@ -70,16 +71,6 @@
 			"format": "{1} / {2}"
 		},
 		*/
-		{
-			"type": "cpu",
-			"key": "[cpu]   ",
-			"format": "{1} @ {7}"
-		},
-		{
-			"type": "gpu",
-			"key": "[gpu]   ",
-			"format": "{2}"
-		},
 		{
 			"type": "wm",
 			"key": "[wm]    ",
@@ -90,7 +81,7 @@
 			"string": " ",
 			"length": 38,
 			"outputColor": "blink_"
-		},
+		}
 
     // "theme",
     // "host",

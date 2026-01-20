@@ -2,43 +2,33 @@
 draw_bold_text_with_bright_colors = true
 transparent_background_colors = false
 
+[colors.normal]
+black   = '#15161E'
+red     = '#FC0D65'
+magenta = '#FC0D65'
+green   = '#9ECE6A'
+yellow  = '#E0AF68'
+blue    = '#356CE6'
+cyan    = '#44D3FC'
+white   = '#818AB3'
+
 [colors.bright]
-black = '#414868'
-red = '#FF899D'
-green = '#9FE044'
-yellow = '#FABA4A'
-blue = '#8DB0FF'
-magenta = '#C7A9FF'
-cyan = '#A4DAFF'
-white = '#C0CAF5'
+black   = '#2A334A'
+red     = '#FD689F'
+magenta = '#FD689F'
+green   = '#C0E09F'
+yellow  = '#ECCEA2'
+blue    = '#44D3FC'
+cyan    = '#81E2FD'
+white   = '#C0CAF5'
 
 [colors.cursor]
-cursor = '#C0CAF5'
-text = '#15161E'
-
-[colors.dim]
-black = "#494D64"
-blue = "#8AADF4"
-cyan = "#8BD5CA"
-green = "#A6DA95"
-magenta = "#F5BDE6"
-red = "#ED8796"
-white = "#B8C0E0"
-yellow = "#EED49F"
-
-[colors.normal]
-black = '#15161E'
-red = '#E04C67'
-green = '#9ECE6A'
-yellow = '#E0AF68'
-blue = '#356CE6'
-magenta = '#BB9AF7'
-cyan = '#7DCFFF'
-white = '#C0CAF5'
+cursor  = '#C0CAF5'
+text    = '#15161E'
 
 [colors.primary]
 background = '#15161E'
-foreground = '#C0CAF5'
+foreground = '#818AB3'
 
 [colors.search.focused_match]
 background = "#F4DBD6"
@@ -49,20 +39,12 @@ background = "#A5ADCB"
 foreground = "#24273A"
 
 [colors.selection]
-background = "CellForeground"
-text = "CellBackground"
+background = "#24293B"
+text       = "#818AB3"
 
 [colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
-[[colors.indexed_colors]]
-index = 16
-color = '#FF9E64'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#DB4B4B'
+cursor = "#818AB3"
+text   = "#15161E"
 
 [cursor]
 unfocused_hollow = true
@@ -76,10 +58,24 @@ blinking = "On"
 shape = "Block"
 
 [font]
-size = 13
+size = 16
 
 [font.normal]
+family = "SF Mono"
+# family = "GoMono Nerd Font"
+style = "Semibold"
+
+[font.bold]
+family = "SF Mono"
+style = "Bold"
+
+[font.italic]
 family = "CaskaydiaCove NF"
+style = "Semibold Italic"
+
+[font.bold_italic]
+family = "SF Mono"
+style = "Bold Italic"
 
 [font.offset]
 x = 0
@@ -109,8 +105,4 @@ startup_mode = "Windowed"
 
 [window.padding]
 x = 4
-y = 0
-
-[window.dimensions]
-columns = 66
-lines = 25
+y = 5

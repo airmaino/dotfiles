@@ -1,22 +1,19 @@
-return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			local ok, tsconfigs = pcall(require, "nvim-treesitter.configs")
-			if not ok then
-				vim.notify("nvim-treesitter not installed", vim.log.levels.WARN)
-				return
-			end
-
-			tsconfigs.setup {
-				ensure_installed = {
-					"lua",
-				},
-				ignore_install = { 'org' },
-				highlight = { enable = true },
-				indent = { enable = true },
-			}
-		end,
-	},
+require'nvim-treesitter'.setup {
+  install_dir = vim.fn.stdpath('data') .. '/site'
 }
+
+require'nvim-treesitter'.install {
+	'bash',
+	'c',
+	'diff',
+	'gitcommit',
+	'lua',
+	'markdown',
+	'markdown_inline',
+	'regex'
+}
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function() vim.treesitter.start() end,
+})

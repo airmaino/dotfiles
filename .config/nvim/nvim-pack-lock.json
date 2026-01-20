@@ -1,0 +1,72 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "820f1ddf634ec267412e403711bf74be26cac677",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "indent-blankline.nvim": {
+      "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
+      "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
+    },
+    "langmapper.nvim": {
+      "rev": "57a2fe4d706676aa0386825f27c27a4e3c14e0b0",
+      "src": "https://github.com/wansmer/langmapper.nvim"
+    },
+    "lspsaga.nvim": {
+      "rev": "8efe00d6aed9db6449969f889170f1a7e43101a1",
+      "src": "https://github.com/nvimdev/lspsaga.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "lush.nvim": {
+      "rev": "9c60ec2279d62487d942ce095e49006af28eed6e",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "mini.icons": {
+      "rev": "efc85e42262cd0c9e1fdbf806c25cb0be6de115c",
+      "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "mini.pick": {
+      "rev": "66148e0e4e2d087c86326c6b58d663da4dde8fc5",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "neorg": {
+      "rev": "d4e6b3665504baa88685c9d2e79446d336dc0594",
+      "src": "https://github.com/nvim-neorg/neorg"
+    },
+    "nvim-lspconfig": {
+      "rev": "92ee7d42320edfbb81f3cad851314ab197fa324a",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "d19def46c112c26c17adeef88dd1253cc6d623a1",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-treesitter-context": {
+      "rev": "64dd4cf3f6fd0ab17622c5ce15c91fc539c3f24a",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
+    },
+    "nvim-web-devicons": {
+      "rev": "803353450c374192393f5387b6a0176d0972b848",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oil.nvim": {
+      "rev": "6b59a6cf623fa2245c7454ddb458df5bdb6615d3",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "c54380dd4d8d1738b9691a7c349ecad7967ac12e",
+      "src": "https://github.com/meanderingprogrammer/render-markdown.nvim"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "c7b1488ad0b389763c34bd17a6264424b3da5a52",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+    }
+  }
+}

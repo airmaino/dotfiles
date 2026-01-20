@@ -8,6 +8,6 @@ if pgrep -x waybar >/dev/null; then
 else
 	waybar & disown
 	for m in $(hyprctl monitors -j | jq -r '.[].name'); do
-		hyprctl keyword monitor "$m",addreserved 40 0 0 0
+		hyprctl keyword monitor "$m",addreserved 110 0 0 0
 	done
 fi

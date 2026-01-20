@@ -2,105 +2,101 @@
 vim.o.number         = true
 vim.o.relativenumber = true
 vim.o.cursorline     = true
-vim.o.cursorline     = true
 vim.o.termguicolors  = true
 vim.o.hidden         = true
 vim.o.undofile       = true
 vim.g.have_nerd_font = true
 vim.o.confirm        = true
+vim.opt.splitbelow   = true
+vim.opt.splitright   = true
+vim.opt.smartindent  = true
 vim.o.ignorecase     = true
+vim.o.smartcase      = true
 vim.o.hlsearch       = true
 vim.o.incsearch      = true
 vim.o.wrap           = false
-vim.o.laststatus     = 0
 vim.o.swapfile       = false
 vim.o.showmode       = false
 vim.o.expandtab      = false
+vim.o.timeout        = true
+vim.o.timeoutlen     = 250
+vim.o.scrolloff      = 19
+vim.o.cmdheight      = 0
+vim.o.laststatus     = 2
 vim.o.shiftwidth     = 2
 vim.o.tabstop        = 2
 vim.o.softtabstop    = 2
-vim.o.scrolloff      = 24
 vim.opt.fillchars    = vim.opt.fillchars + { eob = " " }
-vim.o.shell          = '/usr/bin/zsh'
+vim.o.shell          = "/usr/bin/zsh"
 vim.o.langmap        = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
-vim.opt.completeopt  = { 'menu', 'menuone', 'noselect', 'popup' }
+vim.opt.completeopt  = { "menu", "menuone", "noselect", "popup" }
+vim.opt.shortmess:append "cI"
 vim.opt.clipboard    = "unnamedplus"
-vim.opt.shortmess:append 'c'
-vim.opt.shortmess:append 'I'
-vim.opt.winborder   = "rounded"
-vim.o.signcolumn    = "no"
-vim.g.formatoptions = 'qn1'
-vim.o.concealcursor = "nc"
-vim.opt.list        = true
-vim.opt.listchars   = {
+vim.opt.winborder    = "rounded"
+vim.o.guicursor      = "i:block"
+vim.opt.virtualedit  = "block"
+vim.g.formatoptions  = "qn1"
+vim.o.signcolumn     = "no"
+vim.opt.list         = true
+vim.opt.listchars    = {
 	trail = "·",
 	tab   = "··"
 }
 
-
--- KEYMAPS --
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
-
-vim.g.mapleader = ' '
-
-vim.keymap.set('n', '<leader>q', ':silent quit<CR>', { silent = true })
-vim.keymap.set('n', '<leader>r', ':silent restart<CR>', { silent = true })
-vim.keymap.set('n', '<ESC>', ':silent nohlsearch<CR>', { silent = true })
-vim.keymap.set('n', '<leader>w', ':silent write | update<CR>', { silent = true })
-
-vim.keymap.set('n', '<C-h>', '<C-w>h')
-vim.keymap.set('n', '<C-j>', '<C-w>j')
-vim.keymap.set('n', '<C-k>', '<C-w>k')
-vim.keymap.set('n', '<C-l>', '<C-w>l')
-
-vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move window to the left' })
-vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window to the right' })
-vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
-vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
-
-vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { silent = true })
-vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { silent = true })
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { silent = true })
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { silent = true })
-
--- PLUGINS keymaps --
-vim.keymap.set('n', '<leader>f', ':Pick files<CR>', { silent = true })
-vim.keymap.set('n', '<leader>h', ':Pick help<CR>', { silent = true })
-
-vim.keymap.set('n', '<leader>e', ':silent Oil --float<CR>', { silent = true })
-vim.keymap.set('n', '<leader>vd', ':silent Oil --float /home/civr/dcs/vault<CR>', { silent = true })
-vim.keymap.set('n', '<leader>vn', ':silent Oil --float /home/civr/.config/nvim<CR>', { silent = true })
-
-
--- LAZY --
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-	if vim.v.shell_error ~= 0 then
-		vim.api.nvim_echo({
-			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out, "WarningMsg" },
-			{ "\nPress any key to exit..." },
-		}, true, {})
-		vim.fn.getchar()
-		os.exit(1)
-	end
-end
-
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
-	change_detection = {
-		enabled = false,
-		notify = false,
-	},
-	spec = {
-		{ import = "plugins" },
-	},
+vim.pack.add({
+	{ src = "https://github.com/meanderingprogrammer/render-markdown.nvim" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+	{ src = "https://github.com/wansmer/langmapper.nvim" },
+	{ src = "https://github.com/neovim/nvim-lspconfig" },
+	{ src = "https://github.com/nvim-mini/mini.pick" },
+	{ src = "https://github.com/stevearc/oil.nvim" },
+	{ src = "https://github.com/rktjmp/lush.nvim" },
+	{ src = "https://github.com/saghen/blink.cmp" },
 })
 
+require "plugins.md_render"
+require "plugins.treesitter"
+require "plugins.langmapper"
+require "plugins.lspconfig"
+require "plugins.picker"
+require "plugins.oil"
+require "plugins.lush"
+require "plugins.blink"
+
+-- KEYMAPS --
+vim.g.mapleader      = ' '
+vim.g.maplocalleader = ','
+
+vim.keymap.set('n', "<leader>q", ":silent quit<CR>",       { silent = true })
+vim.keymap.set('n', "<leader>r", ":silent restart<CR>",    { silent = true })
+vim.keymap.set('n', "<ESC>",     ":silent nohlsearch<CR>", { silent = true })
+vim.keymap.set('n', "<leader>w", ":silent write<CR>",      { silent = true })
+
+vim.keymap.set('n', "<C-h>",     "<C-w>h" )
+vim.keymap.set('n', "<C-j>",     "<C-w>j" )
+vim.keymap.set('n', "<C-k>",     "<C-w>k" )
+vim.keymap.set('n', "<C-l>",     "<C-w>l" )
+
+vim.keymap.set('n', "<C-S-h>",   "<C-w>H" )
+vim.keymap.set('n', "<C-S-l>",   "<C-w>L" )
+vim.keymap.set('n', "<C-S-j>",   "<C-w>J" )
+vim.keymap.set('n', "<C-S-k>",   "<C-w>K" )
+
+vim.keymap.set('n', "<A-j>",     ":m .+1<CR>==", { silent = true })
+vim.keymap.set('n', "<A-k>",     ":m .-2<CR>==", { silent = true })
+vim.keymap.set('v', "<A-j>",     ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', "<A-k>",     ":m '<-2<CR>gv=gv", { silent = true })
+
+-- PLUGINS keymaps --
+vim.keymap.set('n', "<leader>f", ":Pick files<CR>", { silent = true })
+vim.keymap.set('n', "<leader>h", ":Pick help<CR>", { silent = true })
+
+vim.keymap.set('n', "<leader>e",  ":silent Oil --float<CR>", { silent = true })
+vim.keymap.set('n', "<leader>ev", ":silent Oil --float ~/v/<CR>", { silent = true })
+vim.keymap.set('n', "<leader>en", ":silent Oil --float ~/.dotfiles/.config/nvim/<CR>", { silent = true })
+
+-- MY --
 require "config.autocommands"
 require "config.autopairs"
 require "config.terminal"
+require "config.statusline"

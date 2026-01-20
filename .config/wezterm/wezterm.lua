@@ -7,7 +7,7 @@ config.font = wezterm.font {
 	weight = "Medium",
 }
 
-config.font_size = 13
+config.font_size = 16
 
 config.window_padding = {
 	left = 4,

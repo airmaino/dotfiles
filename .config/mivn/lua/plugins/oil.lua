@@ -1,4 +1,4 @@
-require("oil").setup {
+require("oil").setup({
 
 	columns = {
 		"icon"
@@ -60,14 +60,14 @@ require("oil").setup {
 	lsp_file_operations = {
 	enable = false,
 	},
+})
 
-	vim.api.nvim_create_autocmd("FileType", {
-		pattern = "oil",
-		callback = function()
-			vim.opt_local.number = false
-			vim.opt_local.relativenumber = false
-			vim.opt_local.signcolumn = "no"
-			vim.opt_local.foldcolumn = "0"
-		end
-	})
-}
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "oil",
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.opt_local.signcolumn = "no"
+		vim.opt_local.foldcolumn = "0"
+	end
+})
