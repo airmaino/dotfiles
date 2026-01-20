@@ -149,5 +149,4 @@ export FZF_DEFAULT_OPTS="
   --color=spinner:#6ECE6A
 "
 
-
 st
