@@ -1,5 +1,11 @@
 .zsh_history
+.config/dconf/
+.config/mivn/
+.config/qBittorrent/
+.config/rtorrent/
+.config/yay/
 .config/bob/
+.config/pulse/
 .config/themes/
 .config/gtk-4.0/
 .ssh/

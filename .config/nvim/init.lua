@@ -1,12 +1,12 @@
 -- GENERAL --
 vim.o.number         = true
 vim.o.relativenumber = true
+vim.o.confirm        = true
 vim.o.cursorline     = true
 vim.o.termguicolors  = true
 vim.o.hidden         = true
 vim.o.undofile       = true
 vim.g.have_nerd_font = true
-vim.o.confirm        = true
 vim.opt.splitbelow   = true
 vim.opt.splitright   = true
 vim.opt.smartindent  = true
@@ -30,7 +30,7 @@ vim.opt.fillchars    = vim.opt.fillchars + { eob = " " }
 vim.o.shell          = "/usr/bin/zsh"
 vim.o.langmap        = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 vim.opt.completeopt  = { "menu", "menuone", "noselect", "popup" }
-vim.opt.shortmess:append "cI"
+vim.opt.shortmess:append "Iacst"
 vim.opt.clipboard    = "unnamedplus"
 vim.opt.winborder    = "rounded"
 vim.o.guicursor      = "i:block"
@@ -67,10 +67,10 @@ require "plugins.blink"
 vim.g.mapleader      = ' '
 vim.g.maplocalleader = ','
 
-vim.keymap.set('n', "<leader>q", ":silent quit<CR>",       { silent = true })
-vim.keymap.set('n', "<leader>r", ":silent restart<CR>",    { silent = true })
-vim.keymap.set('n', "<ESC>",     ":silent nohlsearch<CR>", { silent = true })
-vim.keymap.set('n', "<leader>w", ":silent write<CR>",      { silent = true })
+vim.keymap.set('n', "<leader>q", ":silent! quit<CR>",       { silent = true })
+vim.keymap.set('n', "<leader>r", ":silent! restart<CR>",    { silent = true })
+vim.keymap.set('n', "<ESC>",     ":silent! nohlsearch<CR>", { silent = true })
+vim.keymap.set('n', "<leader>w", ":silent! write<CR>",      { silent = true })
 
 vim.keymap.set('n', "<C-h>",     "<C-w>h" )
 vim.keymap.set('n', "<C-j>",     "<C-w>j" )
@@ -78,14 +78,14 @@ vim.keymap.set('n', "<C-k>",     "<C-w>k" )
 vim.keymap.set('n', "<C-l>",     "<C-w>l" )
 
 vim.keymap.set('n', "<C-S-h>",   "<C-w>H" )
-vim.keymap.set('n', "<C-S-l>",   "<C-w>L" )
 vim.keymap.set('n', "<C-S-j>",   "<C-w>J" )
 vim.keymap.set('n', "<C-S-k>",   "<C-w>K" )
+vim.keymap.set('n', "<C-S-l>",   "<C-w>L" )
 
-vim.keymap.set('n', "<A-j>",     ":m .+1<CR>==", { silent = true })
-vim.keymap.set('n', "<A-k>",     ":m .-2<CR>==", { silent = true })
-vim.keymap.set('v', "<A-j>",     ":m '>+1<CR>gv=gv", { silent = true })
-vim.keymap.set('v', "<A-k>",     ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set('n', "<A-j>",     ":silent! m .+1<CR>==", { silent = true })
+vim.keymap.set('n', "<A-k>",     ":silent! m .-2<CR>==", { silent = true })
+vim.keymap.set('v', "<A-j>",     ":silent! m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', "<A-k>",     ":silent! m '<-2<CR>gv=gv", { silent = true })
 
 -- PLUGINS keymaps --
 vim.keymap.set('n', "<leader>f", ":Pick files<CR>", { silent = true })
