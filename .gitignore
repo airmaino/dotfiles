@@ -1,6 +1,6 @@
-.zsh_history
 .config/dconf/
 .config/mivn/
+.config/QtProject.conf
 .config/qBittorrent/
 .config/rtorrent/
 .config/yay/

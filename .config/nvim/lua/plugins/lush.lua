@@ -146,7 +146,7 @@ local theme = lush(function()
 		OilFile       { fg = colors.fg,    bg = colors.bg },
 
 		FloatBorder   { fg = colors.one_more, bg = colors.bg },
-		NormalFloat   { fg = colors.magenta,  bg = colors.bg },
+		NormalFloat   { bg = colors.bg },
 
 		Title         { fg = colors.terminal_bl, gui = "bold" }, -- NEED FIX --
 
@@ -254,21 +254,71 @@ local theme = lush(function()
 	}
 end)
 
-		--vim.api.nvim_create_autocmd("FileType", {
-		--	pattern = "markdown",
-		--	callback = function()
-		--		vim.cmd(string.format([[
-		--		highlight! LineNr guifg=%s guibg=%s
-		--		highlight! CursorLineNr guifg=%s guibg=%s
-		--		]], colors.bg.hex, colors.bg.hex, colors.bg.hex, colors.bg.hex))
-		--	end,
-		--})
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "org",
+			callback = function()
+				vim.cmd(string.format([[
+				highlight! LineNr guifg=%s guibg=%s
+				highlight! CursorLineNr guifg=%s guibg=%s
+				]], colors.bg.hex, colors.bg.hex, colors.bg.hex, colors.bg.hex))
+			end,
+		})
 
 		lush(theme)
 
-		vim.api.nvim_set_hl(0, "@variable",                { fg = colors.fg.hex })
+		vim.api.nvim_set_hl(0, "@variable",                 { fg = colors.fg.hex })
 
 		--- For C ---
-		vim.api.nvim_set_hl(0, "@variable.c",              { fg = colors.fg.hex })
-		vim.api.nvim_set_hl(0, "@punctuation.bracket.c",   { fg = colors.fg.hex })
-		vim.api.nvim_set_hl(0, "@punctuation.delimiter.c", { fg = colors.fg.hex })
+		vim.api.nvim_set_hl(0, "@variable.c",               { fg = colors.fg.hex })
+		vim.api.nvim_set_hl(0, "@punctuation.bracket.c",    { fg = colors.fg.hex })
+		vim.api.nvim_set_hl(0, "@punctuation.delimiter.c",  { fg = colors.fg.hex })
+
+		--- FOR ORG ---
+		vim.api.nvim_set_hl(0, "@org.headline.level1.org",  { fg = colors.magenta.hex })
+		vim.api.nvim_set_hl(0, "@org.headline.level2.org",  { fg = colors.orange.hex })
+		vim.api.nvim_set_hl(0, "@org.headline.level3.org",  { fg = colors.green.hex })
+		vim.api.nvim_set_hl(0, "@org.headline.level4.org",  { fg = colors.cyan.hex })
+		vim.api.nvim_set_hl(0, "@org.headline.level5.org",  { fg = colors.blue2.hex })
+		vim.api.nvim_set_hl(0, "@org.headline.level6.org",  { fg = colors.purple.hex })
+
+		vim.api.nvim_set_hl(0, "@org.keyword.todo.org",     { fg = colors.cyan.hex })
+		vim.api.nvim_set_hl(0, "@org.keyword.done.org",     { fg = colors.green.hex })
+
+		vim.api.nvim_set_hl(0, "@org.bullet.org",           { fg = colors.one_more.hex })
+		vim.api.nvim_set_hl(0, "@org.checkbox.org",         { fg = colors.one_more.hex })
+		vim.api.nvim_set_hl(0, "@org.tag.org",              { fg = colors.terminal_bl.hex })
+		vim.api.nvim_set_hl(0, "@org.checkbox.checked.org", { fg = colors.green.hex })
+
+		vim.api.nvim_set_hl(0, "@org.hyperlink.org",        { fg = colors.cyan.hex })
+		vim.api.nvim_set_hl(0, "@org.hyperlink.url.org",    { fg = colors.cyan.hex })
+		vim.api.nvim_set_hl(0, "@org.hyperlink.desc.org",   { fg = colors.cyan.hex })
+
+		vim.api.nvim_set_hl(0, "@org.plan.org",             { fg = colors.terminal_bl.hex })
+		vim.api.nvim_set_hl(0, "@org.timestamp.active.org", { fg = colors.cyan.hex })
+		vim.api.nvim_set_hl(0, "@org.timestamp.inactive.org",{ fg = colors.terminal_bl.hex })
+
+		vim.api.nvim_set_hl(0, "@org.properties.org",       { fg = colors.terminal_bl.hex })
+		vim.api.nvim_set_hl(0, "@org.properties.name.org",  { fg = colors.terminal_bl.hex })
+
+		vim.api.nvim_set_hl(0, "@org.table.delimiter.org",  { fg = colors.one_more.hex })
+		vim.api.nvim_set_hl(0, "@org.table.heading.org",    { fg = colors.fg.hex })
+
+		vim.api.nvim_set_hl(0, "@org.block.org",            { fg = colors.terminal_bl.hex })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

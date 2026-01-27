@@ -1,6 +1,7 @@
 vim.lsp.enable({
 	"clangd",
 	"lua_ls",
+	"org"
 })
 
 vim.lsp.config["lua_ls"] = {

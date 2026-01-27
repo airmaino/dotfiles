@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
+	pattern = "org",
 	callback = function()
 		vim.o.wrap           = true
 		vim.o.linebreak      = true

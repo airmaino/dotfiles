@@ -56,6 +56,14 @@
       "rev": "6b59a6cf623fa2245c7454ddb458df5bdb6615d3",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "org-modern.nvim": {
+      "rev": "c024900b7ee78a0274036025569b47001ef3e6aa",
+      "src": "https://github.com/danilshvalov/org-modern.nvim"
+    },
+    "orgmode": {
+      "rev": "0f8653283bb7af84ef75b3d664851584963c64a3",
+      "src": "https://github.com/nvim-orgmode/orgmode"
+    },
     "plenary.nvim": {
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"

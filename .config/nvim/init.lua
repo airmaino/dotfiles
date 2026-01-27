@@ -7,9 +7,9 @@ vim.o.termguicolors  = true
 vim.o.hidden         = true
 vim.o.undofile       = true
 vim.g.have_nerd_font = true
-vim.opt.splitbelow   = true
-vim.opt.splitright   = true
-vim.opt.smartindent  = true
+vim.o.splitbelow   = true
+vim.o.splitright   = true
+vim.o.smartindent  = true
 vim.o.ignorecase     = true
 vim.o.smartcase      = true
 vim.o.hlsearch       = true
@@ -48,6 +48,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	{ src = "https://github.com/wansmer/langmapper.nvim" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
+	{ src = "https://github.com/nvim-orgmode/orgmode" },
 	{ src = "https://github.com/nvim-mini/mini.pick" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/rktjmp/lush.nvim" },
@@ -58,6 +59,7 @@ require "plugins.md_render"
 require "plugins.treesitter"
 require "plugins.langmapper"
 require "plugins.lspconfig"
+require "plugins.org"
 require "plugins.picker"
 require "plugins.oil"
 require "plugins.lush"
@@ -69,18 +71,18 @@ vim.g.maplocalleader = ','
 
 vim.keymap.set('n', "<leader>q", ":silent! quit<CR>",       { silent = true })
 vim.keymap.set('n', "<leader>r", ":silent! restart<CR>",    { silent = true })
-vim.keymap.set('n', "<ESC>",     ":silent! nohlsearch<CR>", { silent = true })
 vim.keymap.set('n', "<leader>w", ":silent! write<CR>",      { silent = true })
-
-vim.keymap.set('n', "<C-h>",     "<C-w>h" )
-vim.keymap.set('n', "<C-j>",     "<C-w>j" )
-vim.keymap.set('n', "<C-k>",     "<C-w>k" )
-vim.keymap.set('n', "<C-l>",     "<C-w>l" )
+vim.keymap.set('n', "<ESC>",     ":silent! nohlsearch<CR>", { silent = true })
 
 vim.keymap.set('n', "<C-S-h>",   "<C-w>H" )
 vim.keymap.set('n', "<C-S-j>",   "<C-w>J" )
 vim.keymap.set('n', "<C-S-k>",   "<C-w>K" )
 vim.keymap.set('n', "<C-S-l>",   "<C-w>L" )
+
+vim.keymap.set('n', "<C-h>",     "<C-w>h" )
+vim.keymap.set('n', "<C-j>",     "<C-w>j" )
+vim.keymap.set('n', "<C-k>",     "<C-w>k" )
+vim.keymap.set('n', "<C-l>",     "<C-w>l" )
 
 vim.keymap.set('n', "<A-j>",     ":silent! m .+1<CR>==", { silent = true })
 vim.keymap.set('n', "<A-k>",     ":silent! m .-2<CR>==", { silent = true })
@@ -97,6 +99,5 @@ vim.keymap.set('n', "<leader>en", ":silent Oil --float ~/.dotfiles/.config/nvim/
 
 -- MY --
 require "config.autocommands"
-require "config.autopairs"
 require "config.terminal"
 require "config.statusline"
