@@ -1,25 +1,25 @@
 [colors]
-draw_bold_text_with_bright_colors = true
+draw_bold_text_with_bright_colors = false
 transparent_background_colors = false
 
 [colors.normal]
 black   = '#15161E'
-red     = '#FC0D65'
-magenta = '#FC0D65'
+red     = '#F22E52'
 green   = '#9ECE6A'
-yellow  = '#E0AF68'
-blue    = '#356CE6'
+yellow  = '#FABA4A'
+blue    = '#7AA2F7'
+magenta = '#FC0D65'
 cyan    = '#44D3FC'
 white   = '#818AB3'
 
 [colors.bright]
-black   = '#2A334A'
-red     = '#FD689F'
-magenta = '#FD689F'
-green   = '#C0E09F'
-yellow  = '#ECCEA2'
-blue    = '#44D3FC'
-cyan    = '#81E2FD'
+black   = '#414868'
+red     = '#F5617C'
+green   = '#B6DC8F'
+yellow  = '#E0AF68'
+blue    = '#6694FA'
+magenta = '#FC0D65'
+cyan    = '#44D3FC'
 white   = '#C0CAF5'
 
 [colors.cursor]
@@ -47,18 +47,14 @@ cursor = "#818AB3"
 text   = "#15161E"
 
 [cursor]
-unfocused_hollow = true
+unfocused_hollow = false
 
 [cursor.style]
-blinking = "On"
 shape = "Block"
-
-[cursor.vi_mode_style]
-blinking = "On"
-shape = "Block"
+blinking = "Always"
 
 [font]
-size = 16
+size = 14
 
 [font.normal]
 family = "SF Mono"
@@ -74,7 +70,7 @@ family = "CaskaydiaCove NF"
 style = "Semibold Italic"
 
 [font.bold_italic]
-family = "SF Mono"
+family = "CaskaydiaCove NF"
 style = "Bold Italic"
 
 [font.offset]
@@ -98,11 +94,20 @@ osc52 = "CopyPaste"
 args = ["-l"]
 program = "/bin/zsh"
 
+[cursor.vi_mode_style]
+shape = "Block"
+blinking = "Always"
+
 [window]
 decorations = "none"
 dynamic_padding = true
 startup_mode = "Windowed"
 
 [window.padding]
-x = 0
-y = 0
+x = 2
+y = 2
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Alt"
+action = "ToggleFullscreen"

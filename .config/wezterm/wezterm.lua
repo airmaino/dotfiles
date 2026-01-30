@@ -11,53 +11,49 @@ config.font_size = 16
 
 config.window_padding = {
 	left = 4,
-	right = 4,
-	top = 0,
+	right = 0,
+	top = 6,
 	bottom = 0,
 }
 
 config.enable_scroll_bar = false
 config.enable_wayland = true
-config.front_end = "OpenGL"
 
 config.colors = {
-	foreground = '#7DCFFF',
-	background = '#15161E',
+	foreground     = '#44D3FC',
+	background     = '#15161E',
 
-	cursor_bg = '#7DCFFF',
-	cursor_fg = '#15161E',
+	cursor_bg      = '#818AB3',
+	cursor_fg      = '#15161E',
 
-	selection_bg = '#252A3C',
-	selection_fg = '#C0CAF5',
+	selection_bg   = '#24293B',
+	selection_fg   = '#818AB3',
+
+	compose_cursor = '#818AB3',
 
 	ansi = {
 		'#15161E',
-		'#E04C67',
+		'#F22E52',
 		'#9ECE6A',
-		'#E0AF68',
-		'#356CE6',
-		'#BB9AF7',
-		'#7DCFFF',
-		'#C0CAF5',
+		'#FABA4A',
+		'#7AA2F7',
+		'#FC0D65',
+		'#44D3FC',
+		'#818AB3',
+
 	},
 
 	brights = {
 		'#414868',
-		'#FF899D',
-		'#9FE044',
-		'#FABA4A',
-		'#8DB0FF',
+		'#F5617C',
+		'#B6DC8F',
+		'#E0AF68',
+		'#6694FA',
 		'#C7A9FF',
-		'#A4DAFF',
+		'#44D3FC',
 		'#C0CAF5',
 	},
 
-	indexed = {
-		[16] = '#FF9E64',
-		[17] = '#DB4B4B',
-	},
-
-	compose_cursor = '#C0CAF5',
 }
 
 config.default_cursor_style = "BlinkingBlock"

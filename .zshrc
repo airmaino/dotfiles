@@ -18,6 +18,7 @@ bindkey -M vicmd '^F' autosuggest-accept
 
 ## ALIASES ##
 alias n='nvim'
+alias al='nvim -c "Oil --float"'
 alias py='python'
 alias cal='LC_TIME=ru_RU.UTF-8 cal'
 alias run='gcc ~/justc/main.c -o ~/justc/main && ~/justc/main'

@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "org",
 	callback = function()
+		vim.o.colorcolumn    = "0"
 		vim.o.wrap           = true
 		vim.o.linebreak      = true
 		vim.o.breakindent    = true

@@ -7,9 +7,9 @@ vim.o.termguicolors  = true
 vim.o.hidden         = true
 vim.o.undofile       = true
 vim.g.have_nerd_font = true
-vim.o.splitbelow   = true
-vim.o.splitright   = true
-vim.o.smartindent  = true
+vim.o.splitbelow     = true
+vim.o.splitright     = true
+vim.o.smartindent    = true
 vim.o.ignorecase     = true
 vim.o.smartcase      = true
 vim.o.hlsearch       = true
@@ -20,6 +20,7 @@ vim.o.showmode       = false
 vim.o.expandtab      = false
 vim.o.timeout        = true
 vim.o.timeoutlen     = 250
+vim.o.colorcolumn    = "0"
 vim.o.scrolloff      = 19
 vim.o.cmdheight      = 0
 vim.o.laststatus     = 2
@@ -31,18 +32,19 @@ vim.o.shell          = "/usr/bin/zsh"
 vim.o.langmap        = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 vim.opt.completeopt  = { "menu", "menuone", "noselect", "popup" }
 vim.opt.shortmess:append "Iacst"
-vim.opt.clipboard    = "unnamedplus"
-vim.opt.winborder    = "rounded"
+vim.o.clipboard      = "unnamedplus"
+vim.o.winborder      = "rounded"
 vim.o.guicursor      = "i:block"
-vim.opt.virtualedit  = "block"
-vim.g.formatoptions  = "qn1"
+vim.o.virtualedit    = "block"
 vim.o.signcolumn     = "no"
+vim.g.formatoptions  = "qn1"
 vim.opt.list         = true
 vim.opt.listchars    = {
 	trail = "·",
 	tab   = "··"
 }
 
+-- PLUGINS --
 vim.pack.add({
 	{ src = "https://github.com/meanderingprogrammer/render-markdown.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
@@ -55,7 +57,6 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp" },
 })
 
-require "plugins.md_render"
 require "plugins.treesitter"
 require "plugins.langmapper"
 require "plugins.lspconfig"
@@ -73,6 +74,8 @@ vim.keymap.set('n', "<leader>q", ":silent! quit<CR>",       { silent = true })
 vim.keymap.set('n', "<leader>r", ":silent! restart<CR>",    { silent = true })
 vim.keymap.set('n', "<leader>w", ":silent! write<CR>",      { silent = true })
 vim.keymap.set('n', "<ESC>",     ":silent! nohlsearch<CR>", { silent = true })
+vim.keymap.set('n', "<C-n>",     ":bnext<CR>",              { silent = true })
+vim.keymap.set('n', "<C-b>",     ":bprevious<CR>",          { silent = true })
 
 vim.keymap.set('n', "<C-S-h>",   "<C-w>H" )
 vim.keymap.set('n', "<C-S-j>",   "<C-w>J" )

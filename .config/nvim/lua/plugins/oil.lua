@@ -1,11 +1,12 @@
 require("oil").setup({
 
+	cleanup_delay_ms = false,
 	columns = {
 		"icon"
 	},
 
 	view_options = {
-		show_hidden = false,
+		show_hidden = true,
 		show_banner = true,
 		preview = true,
 		indent_size = 2,
@@ -53,7 +54,7 @@ require("oil").setup({
 		signcolumn = "no",
 		buflisted = true,
 		swapfile = false,
-		bufhidden = "wipe",
+		bufhidden = "hide",
 		filetype = "oil",
 	},
 

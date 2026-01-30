@@ -1,5 +1,0 @@
-[keymap.main]
-l = [
-	{ run = "<D>", when = "select.file" }
-]
-
